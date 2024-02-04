@@ -1,0 +1,21 @@
+I scanned the ports of another machine's private IP on my network and recorded the runtime using the single threaded version versus the multi threaded example that is using 10 threads.
+
+java -jar PortScanner.jar 172.16.0.4 1 65535
+
+
+Connected to port 5000 with local address 55730/172.16.0.13
+Connected to port 7000 with local address 46984/172.16.0.13
+Connected to port 49241 with local address 50756/172.16.0.13
+
+Total Runtime: 4 minutes 22 seconds
+
+
+java -jar ThreadedPortScanner.jar 172.16.0.4 1 65535
+
+Connected to port 7000 with local address 43758/172.16.0.13
+Connected to port 49241 with local address 39590/172.16.0.13
+Connected to port 5000 with local address 42954/172.16.0.13
+
+Total Runtime: 1 minute and 50 seconds
+
+Slightly more than twice as fast using 10 threads.

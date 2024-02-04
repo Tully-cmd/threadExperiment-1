@@ -1,0 +1,17 @@
+compile
+
+kotlinc PortScanner.kt -include-runtime -d PortScanner.jar
+
+run
+
+java -jar PortScanner.jar localhost 1 65535
+
+Example output:
+Connected to port 631 with local address 43008/127.0.0.1
+Connected to port 902 with local address 33602/127.0.0.1
+Connected to port 3306 with local address 51488/127.0.0.1
+Connected to port 9050 with local address 47738/127.0.0.1
+Connected to port 33060 with local address 59930/127.0.0.1
+Connected to port 47854 with local address 47854/127.0.0.1
+
+
